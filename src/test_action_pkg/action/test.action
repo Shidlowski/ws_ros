@@ -1,0 +1,5 @@
+uint32 goal
+---
+uint32[] rezult
+---
+uint32[] feadback

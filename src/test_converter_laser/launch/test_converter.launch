@@ -1,0 +1,23 @@
+<launch>
+    <!--Include launch file covert_laser_scan_to_point_cloud2-->
+    <include file="$(find convert_laser_scan)/launch/convert_laser_scan_to_point_cloud2.launch" />
+    
+    <param name = "/take_laser_scan/input_laser_scan_topic" value = "tuturu1" />
+    <param name = "/take_laser_scan/output_point_cloud2_topic" value = "tuturu2" />
+
+    <!--test generator start msg laserScan to a topik "laser_scan_data"-->
+    <node
+        pkg="test_converter_laser"
+        type="test_publisher_laser_scan"
+        name="test_publisher_laser_scan"
+        output="screen"
+    />
+
+    <!--display of data from a test topic "poin_cloud2_data" -->
+    <node
+        pkg="test_converter_laser"
+        type="test_subscribe_point_cloud2"
+        name="test_subscribe_point_cloud2"
+        output="screen"
+    />
+</launch>

@@ -1,0 +1,19 @@
+<launch>
+
+    <!--launch of a subscriber subscribed to a topic "laser_scan_data"
+    convert sensor_msgs/LaserScan to sensor_msgs/PointCloud2
+    publishing to the topic "point_cloud2_data"-->
+    <node
+        pkg="convert_laser_scan"
+        type="take_laser_scan"
+        name="take_laser_scan"
+        output="screen"
+    >
+        <param name="input_laser_scan_topic" type="str" value="laser_scan_data" />
+
+        <param name="output_point_cloud2_topic" type="str" value="point_cloud2_data" />
+
+    </node>
+
+
+</launch>
