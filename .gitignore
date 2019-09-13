@@ -2,3 +2,5 @@
 build/
 devel/
 ws_ros(старая)/
+.catkin_tools/
+logs/

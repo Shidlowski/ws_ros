@@ -24,7 +24,7 @@ int main(int argc, char **argv){
 
     std::string input_topic;
     if(!privateNodeHandle.getParam("input_topic", input_topic)){
-        ROS_ERROR_STREAM("Error getParam input_topic");
+        ROS_FATAL("Error getParam input_topic");
         return 1;
     }
     else
@@ -34,7 +34,7 @@ int main(int argc, char **argv){
     
     std::string output_topic;
     if (!privateNodeHandle.getParam("output_topic", output_topic)) {
-        ROS_ERROR_STREAM("Error getParam output_topic");
+        ROS_FATAL("Error getParam output_topic");
         return 1;
     }
     else
