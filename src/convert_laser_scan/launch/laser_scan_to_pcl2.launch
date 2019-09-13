@@ -9,9 +9,9 @@
         name="take_laser_scan"
         output="screen"
     >
-        <param name="input_laser_scan_topic" type="str" value="laser_scan_data" />
+        <param name="input_topic" type="str" value="laser_scan_data" />
 
-        <param name="output_point_cloud2_topic" type="str" value="point_cloud2_data" />
+        <param name="output_topic" type="str" value="point_cloud2_data" />
 
     </node>
 
